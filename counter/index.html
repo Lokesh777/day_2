@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+          font-weight: 900;
+          margin-left: 330px;
+          margin-bottom: 60px;
+          font-size: 50px;
+        }
+        button{
+            border-radius: 10px;
+            height: 70px;
+            width: 260px;
+            margin-left: 60px;
+            box-shadow: rgba(0,0,0,0.36) 0px 4px 9px;
+            font-size: 25px;
+        }
+    button:hover{
+         transition: 5.4 ease-in-out;
+         cursor: pointer;
+         background-color: gray;
+    }
+                
+        p{
+            font-size: 40px;
+            margin-left: 190px;
+            font-family: 900;
+        }
+
+        img{
+            margin-left:75px ;
+        }
+    </style>
+</head>
+<body>
+       <img src="https://www.gofleet.com/wp-content/uploads/2014/05/increase-company-response-speed-fleet-management.png"/>
+       <p>Manual Speedometer</p>
+       <h1>counter Value</h1>
+       <button id="High" >Increase</button>
+       <button id="Low" >Decrease</button>
+</body>
+</html>
+<script>
+           var count= localStorage.getItem("counterValue")||0;
+
+           document.querySelector("h1").innerText=count;
+           document.querySelector("#Low").addEventListener("click",dFun);
+           function dFun(){
+               count--;
+               document.querySelector("h1").innerText=count;
+               localStorage.setItem("counterValue",count);
+
+           }
+
+           document.querySelector("h1").innerText=count;
+           document.querySelector("#High").addEventListener("click",iFun);
+           function iFun(){
+               count++;
+               document.querySelector("h1").innerText=count;
+               document.setItem("counterValue",count);
+           }
+</script>
