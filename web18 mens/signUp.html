@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+           body{
+        background-color:rgb(254, 255, 212);
+      }
+        #navbar{
+           height: 50px;
+           width: 100%;
+           display: flex;
+          background-color:rgb(67, 28, 108);
+          justify-content: space-between;
+          border-radius: 10px;
+         }
+         #navbar>div{
+           height: 50px;
+           width: 20%;
+           text-align: center;
+           font-size: 25px;
+           font-weight: 900;
+         }
+         #navbar >div>a{
+             color: white;
+             text-decoration: none;
+           
+         }
+        
+
+         #navbar>div+div{
+          height: 50px;
+           width: 20%;
+           text-align: center;
+           font-size: 25px;
+           font-weight: 900;   
+           margin-top: 10px;    
+          
+         }
+         #navbar >div:nth-child(1){
+           margin-top: .5%;
+          
+         }
+         #navbar >div:nth-child(2){
+           margin-left: 30%;
+         }
+         #navbar >div:nth-child(3){
+           margin-left: 1%;
+         }
+         #navbar >div:nth-child(4){
+           margin-right: -80px;
+         }
+         #navbar >div:nth-child(5){
+          margin-right: -120px;
+         
+         }
+           #main{
+               height: 600px;
+               width: 33%;
+               border: 0px solid red;
+               border-radius: 10px;
+               margin: 1% 25% 0% 32%;
+               box-shadow: rgba(0,0,0,0.25) 0px 3px 9px;
+               background-color: white;
+           }
+           h1{
+               text-align: center;
+               margin-bottom: 5%;
+               font-weight: bolder;
+               font-size: 20px;
+               font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+               margin-top:5%;
+               padding-top: 5%;
+           }
+           h2{
+               text-align: center;
+               font-size: 17px;;
+               color: gray;
+               font-family: Arial, Helvetica, sans-serif;
+               font-weight: 400;
+           }
+           p{
+               text-align: center;
+               font-size: 14px;
+               margin: 10px 10% 10px 10%;
+               color: gray;
+           }
+           a{
+               color: blue;
+               text-decoration: none;
+           }
+           h4{
+             margin-bottom: -2px;
+             margin-left: 7%;
+             margin-bottom: 1.6%;
+             margin-top: 3%;
+             color:rgb(82, 82, 82) ;
+             font-size: 13px;
+             font-family: sans-serif;
+             font-weight: 600;
+           }
+           input{
+                height: 40px;
+                width: 84%;
+                margin-left: 7%;
+                margin-bottom: 3%;
+                border-radius: 10px;
+                font-size: 16px;
+                border: 1px solid gray;
+                font-weight: 500;
+               color: rgb(68, 67, 67);
+               background-color: rgb(255, 255, 255);
+
+           }
+           #submit{
+               background-color: rgb(201, 201, 201);
+               margin-top: 20px;
+           }
+           #submit:hover{
+               transition: 2.3 ease-out;
+               background-color: gray;
+           }
+
+           img{
+              margin:2% 0 0 45%;    
+            width: 135px;     }
+    </style>
+</head>
+<body>
+  <div id="navbar">
+    <div><img src="https://content.shop4reebok.com/static/header/vector_logo_white_145x19_website.png"/></div>
+       <div> <a href="mens.html">Mens Collection</a></div>
+       <div><a href="female.html">Womans Collection</a></div>
+       <div><a href="signUp.html" >Sign Up</a></div>
+       <div><a href="login.html" >Sign In</a></div>
+       <div><a href="cart.html">Cart</a></div>
+</div> 
+    <img src="https://i.pinimg.com/originals/2e/bf/1a/2ebf1a893b00a2093817f86cd78a4753.png"/>
+    <div id="main">
+    <h1>Sign Up</h1>
+   
+     <form id="form">
+            
+             
+                   <h4>Full Name</h4>
+                  <input id="name" type="text" placeholder="Enter Your Full Name" />
+              
+                  <h4>Email</h4>
+                  <input id="mail" type="text" placeholder="Enter your email"/>
+                         
+                  <h4>Password</h4>
+                  <input id="pass" type="password" placeholder="Enter Password"/>
+                
+
+                    <p>By signing up, I accept the Masai School <span><a>Terms od Service</a></span> and acknowledge the <a>Privacy Policy</a></p>
+                
+                   
+                        <input id="submit" type="submit" value="SIGN UP" placeholder="SIGN UP">
+                  
+                </form>
+          
+                    <h2>Already have an account?<a href="login.html">Sign In</a></h2>
+        </div>
+
+
+
+</body>
+
+</html>
+<script>
+           document.querySelector("#form").addEventListener("submit",myfan)
+
+    var arr=JSON.parse(localStorage.getItem("input"))||[];
+           function myfan(){
+               event.preventDefault();
+               
+               var data={ name:form.name.value,
+                mail:form.mail.value,
+                pass:form.pass.value    
+            }
+                arr.push(data)
+            //    console.log(data)
+               localStorage.setItem("input",JSON.stringify(arr))
+            window.location.href=""
+
+               
+           }
+           
+</script>

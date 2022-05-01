@@ -1,0 +1,117 @@
+
+.title{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    padding-top: 50px;
+}
+#mainbox{
+    height: 700px;
+    width: 55%;
+    border: 1px solid black;
+    margin-left: 23%;
+    margin-top: 5%;
+    border-radius: 15px;
+   
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+#hbox{
+    height: 250px;
+    width: 70%;
+    border: 0px solid rgb(129, 70, 70);
+    margin-left: 12%;
+    display: flex;justify-content: space-around; margin-top: 20px;
+}
+.left{
+    height: 100px;
+    width: 45%;
+    border:0 0px solid rgb(79, 173, 53);
+    
+}
+.right{
+    height: 100px;
+    width: 45%;
+    border: 0px solid rgb(53, 55, 173);
+    
+}
+
+.left>h3{
+    margin: -7% 0% 0% 28%;
+}
+
+.right>h3{
+    margin: -7% 0% 0% 26%;
+}
+.right>input{
+   margin-right:400px;
+   margin: 70px 400px 0px 50px;
+   border-radius: 10px;
+   
+}
+
+.left>input{
+    border-radius: 10px;
+    margin: 20px 400px 0px 50px;
+ }
+.right>img{
+    align-items: center;
+      margin: 10% 0% -9% 23% ;
+      height: 60px;
+     width: 200px;}
+.left>img{
+      align-items: center;
+      margin: -6% 0% -5% 1% ;
+      height: 150px;
+     width: 400px;
+    ;
+}
+label{
+    font-weight: 700;
+}
+
+#mid>div{
+    height: 50px;
+    width: 90%;
+    border: 0px solid rgb(70, 129, 94);
+    margin-left: 10%;
+    margin-bottom: 30px;
+    
+}
+#midI{
+   margin-left: 40px;
+}
+
+#mid>div>input{
+    height: 40px;
+    width: 25%;
+    margin-left: 2%;
+    margin-right: 5%;
+}
+#inputlab{
+margin-left: 30px ;
+}
+
+.info{
+    height: 50px;
+    width: 90%;
+    border: 0px solid rgb(184, 23, 120);
+  
+    margin-left: 10px;
+    margin-top: 1%;
+}
+
+button{
+    margin-left: 18%;
+    height: 35px;
+    width: 150px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+button:hover{
+    transition: 1.2 ease-in-out;
+    background-color: gray;
+}
